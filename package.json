@@ -1,0 +1,19 @@
+{
+  "name": "js-starter",
+  "version": "1.0.0",
+  "description": "A quick JS starter project",
+  "main": "src/js/app.js",
+  "author": "Justyn Clark",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "browser-sync": "^2.18.13",
+    "npm-run-all": "^4.0.2"
+  },
+  "scripts": {
+    "start": "npm-run-all -p sync babel",
+    "babel": "babel src/js --watch -o dist/js/scripts.js --source-maps --presets env",
+    "sync": "browser-sync start --server --files \"*.html, dist/js/scripts.js, app/app.css\""
+  }
+}
